@@ -55,8 +55,8 @@ export class GuiModel {
                             "url": "/group",
                             "form": "GroupForm",
                             "width": 2
-                           },
-                           
+                        },
+
                         {
                             "id": "comment",
                             "type": "text",
@@ -249,7 +249,7 @@ export class GuiModel {
                             "icon": "fa-weixin",
                             "color": "wisteria",
                             "page": "groupspage",
-                        },{
+                        }, {
                             "type": "button",
                             "name": "Activity",
                             "icon": "fa-weixin",
@@ -279,9 +279,10 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "form": {
+                            "page": "actfriendpage"
+                            /*"form": {
                                 "form": "FriendForm"
-                            }
+                            }*/
                         },
                     ]
                 },
@@ -368,7 +369,44 @@ export class GuiModel {
                         },
 
                     ]
+                },
+                {
+                    "id": "actfriendpage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "EditFriend",
+                            "icon": "fa-weixin",
+                            "color": "green",
+                            "form": {
+                                "form": "FriendForm"
+                            }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-weixin",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "search": true,
+                            "url": "/friend/:friendKey/activity",
+                            "form": {
+                                "form": "GroupForm"
+                            }
+                        },
+
+                    ]
                 }
+
             ]
         }
     };
