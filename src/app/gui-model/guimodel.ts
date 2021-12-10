@@ -370,8 +370,44 @@ export class GuiModel {
                             "color": "wisteria",
                             "search": true,
                             "url": "/activity",
+                            "page": "friendthruactivitypage",
+                        },
+                        /*{
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "search": true,
+                            "url": "/activity",
                             "form": {
                                 "form": "ActivityForm"
+                            }
+                        },*/
+
+                    ]
+                },
+                {
+                    "id": "friendthruactivitypage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditActivity",
+                            "icon": "fa-weixin",
+                            "color": "green",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "search": true,
+                            "url": "/activity/:activityKey/friend",
+                            "form": {
+                                "form": "FriendForm"
                             }
                         },
 
