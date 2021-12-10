@@ -166,11 +166,12 @@ export class GuiModel {
                             "required": true
                         },
                         {
-                            "id": "name",
-                            "type": "text",
-                            "name": "LocationName",
-                            "width": 2,
-                            "required": true
+                            "id": "location",
+                            "type": "autocomplete",
+                            "name": "Location",
+                            "url": "/location",
+                            "form": "LocationForm",
+                            "width": 2
                         },
                         {
                             "id": "activitydate",
@@ -315,10 +316,43 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
+                            "page":"locthruactpage",
+                        },
+                    ]
+                },
+                {
+                    "id": "locthruactpage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },{
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-weixin",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-weixin",
                             "form": {
                                 "form": "LocationForm"
                             }
                         },
+                        {
+                            "type": "list",
+                            "icon": "fa-weixin",
+                            "color": "wisteria",
+                            "search": true,
+                            "url": "/location/:locationKey/activity",
+                            "form": {
+                                "form": "ActivityForm"
+                            }
+                        },
+                        
+
                     ]
                 },
                 {
@@ -385,6 +419,7 @@ export class GuiModel {
 
                     ]
                 },
+
                 {
                     "id": "friendthruactivitypage",
                     "elementList": [
