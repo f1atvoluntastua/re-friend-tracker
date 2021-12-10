@@ -279,7 +279,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "page": "actfriendpage"
+                           "page": "actfriendpage"
                             /*"form": {
                                 "form": "FriendForm"
                             }*/
@@ -381,6 +381,9 @@ export class GuiModel {
                             "name": "EditFriend",
                             "icon": "fa-weixin",
                             "color": "green",
+                            
+                            "url": "/friend",
+                            
                             "form": {
                                 "form": "FriendForm"
                             }
