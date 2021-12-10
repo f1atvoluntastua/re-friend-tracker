@@ -166,6 +166,13 @@ export class GuiModel {
                             "required": true
                         },
                         {
+                            "id": "name",
+                            "type": "text",
+                            "name": "LocationName",
+                            "width": 2,
+                            "required": true
+                        },
+                        {
                             "id": "activitydate",
                             "type": "date",
                             "name": "Date",
@@ -376,18 +383,17 @@ export class GuiModel {
                         {
                             "type": "backbutton",
                         },
+                        
                         {
-                            "type": "newButton",
+                            "type": "button",
                             "name": "EditFriend",
                             "icon": "fa-weixin",
                             "color": "green",
-                            
-                            "url": "/friend",
-                            
                             "form": {
                                 "form": "FriendForm"
                             }
                         },
+
                         {
                             "type": "newButton",
                             "name": "AddActivity",
